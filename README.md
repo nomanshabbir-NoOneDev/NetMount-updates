@@ -22,6 +22,7 @@ Built on **rclone** and **FUSE**. Nothing to install besides the app. No Termux,
 [**🧪 Get the Beta**](https://github.com/nomanshabbir-NoOneDev/NetMount-updates/releases/tag/beta) &nbsp;·&nbsp;
 [**🚀 First steps**](#-first-steps) &nbsp;·&nbsp;
 [**🔄 Updating**](#-updating) &nbsp;·&nbsp;
+[**🔑 Guides**](guides/README.md) &nbsp;·&nbsp;
 [**🛠️ Troubleshooting**](#%EF%B8%8F-troubleshooting)
 
 </div>
@@ -29,7 +30,7 @@ Built on **rclone** and **FUSE**. Nothing to install besides the app. No Termux,
 <br>
 
 > [!NOTE]
-> This repository only holds **downloads** and the files the app reads to update itself. Install the APK once, and NetMount keeps itself up to date from **Settings → Updates**.
+> This repository holds the **downloads**, the files the app reads to update itself, and the [**guides**](guides/README.md). Install the APK once, and NetMount keeps itself up to date from **Settings → Updates**.
 
 ## ✅ What you need
 
@@ -155,6 +156,14 @@ NetMount needs the `INTERNET` permission **only** for the update check and downl
 Passwords are stored encrypted with a key held by the Android Keystore, and never appear in logs or notifications.
 
 </details>
+
+## 🔑 Guides
+
+Google Drive, Dropbox and OneDrive can use **your own app keys**, which ends the shared "rate limit" errors. Step-by-step guides, every click included:
+
+- [Google Drive keys](guides/google-drive.md)
+- [Dropbox keys](guides/dropbox.md)
+- [Microsoft OneDrive keys](guides/onedrive.md)
 
 ## ⚠️ Good to know
 
