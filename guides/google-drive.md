@@ -179,9 +179,14 @@ An app in **Testing** makes Google sign you out of Drive **every 7 days**. Publi
 2. Under **Publishing status** it says **Testing**. Press **Publish app**. *(Still greyed out? Finish Part 7 first.)*
 3. Read the box and press **Confirm**.
 
-✅ **Check:** **Publishing status** now says **In production**.
+✅ **Check:** **Publishing status** now says **In production**, with a button **Back to testing** under it. That is the goal. 🎉
 
-*"Your app isn't verified" is normal here.* Google only asks for verification when an app is used by more than 100 people. You are the only user.
+> [!NOTE]
+> **A yellow box appears at the top:** *"Your app requires verification. When you have finished configuring your information, please submit your app for review."* with a button **Go to verification centre**.
+>
+> **This is normal. Ignore it, and do not press the button.** Google only wants verification for apps that many people use (more than 100). You are the only user, so your app works fine without it. Do **not** press **Back to testing** either, or the 7-day sign-out comes back.
+
+The only thing you will notice is a warning screen when you sign in (Part 9, step 7). It is expected.
 
 If you would rather not publish, you can stay in **Testing** and press **Sign in again** on your storages once a week.
 
@@ -214,6 +219,7 @@ If you would rather not publish, you can stay in **Testing** and press **Sign in
 | `Error 400: invalid_client` or *The OAuth client was not found* | The Client ID or secret was pasted wrongly. Copy them again from **Clients**, with no spaces before or after |
 | Signed out again after about a week | The app is still in **Testing**. Do Part 8 |
 | *Google Drive API has not been used in project ... or it is disabled* | Do Part 2 again, with the `NetMount` project selected in the top bar |
+| A yellow box says *Your app requires verification* | Normal. Ignore it. Do **not** submit the app for review and do not press **Back to testing** |
 | **Publish app** is greyed out and says *complete your configuration on the Branding page* | Do Part 7 (Branding), save it, then try Part 8 again |
 | I lost the secret | **Clients → NetMount → Add secret**, copy the new one, paste it in NetMount and press **Save** |
 | Still "rate limit" sometimes | Normal at very heavy use. Keep **Gentle on request limits** switched on in the storage |
