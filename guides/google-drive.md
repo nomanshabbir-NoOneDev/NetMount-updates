@@ -21,6 +21,28 @@
 
 ---
 
+## 📱 How to move around (read this first, especially on a phone)
+
+From Part 3 on, you work in **Google Auth Platform**. It has its own menu with these pages: **Overview, Branding, Audience, Clients, Data Access**.
+
+- **On a computer** this menu is always on the left.
+- **On a phone it is hidden.** To open it, tap the small **shield-with-a-key icon** just under the black Google Cloud bar, at the left of the words *Google Auth Platform*.
+
+  > [!WARNING]
+  > Do **not** tap the **☰** (three lines) at the very top left. That is a different menu, for Google Cloud in general, and it does not list these pages.
+
+- **Easier still:** every part below has a direct link. Tap the link and you land on the right page. Just make sure `NetMount` is the project selected at the top.
+
+| Page | Direct link |
+|---|---|
+| Overview | <https://console.cloud.google.com/auth/overview> |
+| Branding | <https://console.cloud.google.com/auth/branding> |
+| Audience | <https://console.cloud.google.com/auth/audience> |
+| Data Access | <https://console.cloud.google.com/auth/scopes> |
+| Clients | <https://console.cloud.google.com/auth/clients> |
+
+---
+
 ## Part 1: Make a project (1 minute)
 
 A "project" is just a folder where Google keeps your keys.
@@ -60,17 +82,17 @@ This is the page Google shows when you sign in. Google needs it before it will g
    - **User support email:** choose your own e-mail from the list
    - Press **Next**.
 4. **Step 2, Audience:** choose **External**, then press **Next**.
-   *(If this is a school or work Google Workspace account you may be offered **Internal**. That also works, and then you can skip Part 6.)*
+   *(If this is a school or work Google Workspace account you may be offered **Internal**. That also works, and then you can skip Parts 7 and 8.)*
 5. **Step 3, Contact information:** type your e-mail address and press **Next**.
 6. **Step 4, Finish:** tick **I agree to the Google API Services: User Data Policy**, then press **Continue**, then **Create**.
 
-✅ **Check:** you now see a menu on the left with **Overview, Branding, Audience, Clients, Data Access**.
+✅ **Check:** on a computer you see a menu on the left with **Overview, Branding, Audience, Clients, Data Access**. On a phone, tap the **shield-with-a-key icon** under the Google Cloud bar to open it (see *How to move around* above).
 
 ---
 
 ## Part 4: Allow the Drive permission (2 minutes)
 
-1. In the left menu click **Data Access**.
+1. Open **Data Access**: <https://console.cloud.google.com/auth/scopes> (or the menu, see *How to move around*).
 2. Press **Add or remove scopes**.
 3. A panel slides in from the right. Scroll to the bottom to the box **Manually add scopes**. Paste these three lines into it:
 
@@ -89,7 +111,7 @@ This is the page Google shows when you sign in. Google needs it before it will g
 
 ## Part 5: Add yourself as a "test user" (1 minute)
 
-1. In the left menu click **Audience**.
+1. Open **Audience**: <https://console.cloud.google.com/auth/audience> (or the menu).
 2. Scroll to **Test users** and press **+ Add users**.
 3. Type the Google address that **owns the Drive files** you want in NetMount, and press **Save**.
    Add every account you want to use.
@@ -98,7 +120,7 @@ This is the page Google shows when you sign in. Google needs it before it will g
 
 ## Part 6: Create the keys (2 minutes)
 
-1. In the left menu click **Clients**, then press **+ Create client**.
+1. Open **Clients**: <https://console.cloud.google.com/auth/clients> (or the menu), then press **+ Create client**.
    *(Or on **Overview**, press **Create OAuth client**.)*
 2. **Application type:** choose **Desktop app**.
 
@@ -113,23 +135,59 @@ This is the page Google shows when you sign in. Google needs it before it will g
 
 ---
 
-## Part 7: Publish the app. Do not skip this! (1 minute)
+## Part 7: Finish the Branding page (3 minutes)
+
+Google will not let you publish until this page is complete. If you open **Audience** first, **Publish app** is greyed out and says *"To publish your app, you must complete your configuration on the Branding page."* That is normal: do this part first.
+
+1. Open **Branding**: <https://console.cloud.google.com/auth/branding> (or the menu).
+2. **App information**
+   - **App name:** `NetMount`
+   - **User support email:** your own e-mail.
+   - **App logo:** leave empty.
+3. **App domain**: copy these exactly.
+   - **Application home page:**
+
+     ```
+     https://github.com/nomanshabbir-NoOneDev/NetMount-updates
+     ```
+
+   - **Application privacy policy link:**
+
+     ```
+     https://github.com/nomanshabbir-NoOneDev/NetMount-updates#-permissions-and-privacy
+     ```
+
+   - **Application terms of service link:** leave empty.
+4. **Authorized domains:** press **+ Add domain** and type:
+
+   ```
+   github.com
+   ```
+
+5. **Developer contact information:** type your e-mail address.
+6. Press **Save** at the bottom of the page.
+
+✅ **Check:** the page saves without a red message.
+
+---
+
+## Part 8: Publish the app. Do not skip this! (1 minute)
 
 An app in **Testing** makes Google sign you out of Drive **every 7 days**. Publishing it stops that. It costs nothing and does not make your app public.
 
-1. In the left menu click **Audience**.
-2. Under **Publishing status** it says **Testing**. Press **Publish app**.
+1. Open **Audience**: <https://console.cloud.google.com/auth/audience> (or the menu).
+2. Under **Publishing status** it says **Testing**. Press **Publish app**. *(Still greyed out? Finish Part 7 first.)*
 3. Read the box and press **Confirm**.
 
 ✅ **Check:** **Publishing status** now says **In production**.
 
 *"Your app isn't verified" is normal here.* Google only asks for verification when an app is used by more than 100 people. You are the only user.
 
-**If Publish app is greyed out or asks for more:** open **Branding** in the left menu. Under **App domain** fill in **Application home page** and **Application privacy policy link** with any web page, for example `https://github.com/nomanshabbir-NoOneDev/NetMount-updates`. Press **Save** and try **Publish app** again. If it still does not work, you can stay in **Testing** and sign in again to your storages once a week.
+If you would rather not publish, you can stay in **Testing** and press **Sign in again** on your storages once a week.
 
 ---
 
-## Part 8: Give the keys to NetMount (2 minutes)
+## Part 9: Give the keys to NetMount (2 minutes)
 
 1. Open NetMount: **Settings → Your own app keys → Google Drive**.
 2. Turn the switch **on**.
@@ -152,11 +210,11 @@ An app in **Testing** makes Google sign you out of Drive **every 7 days**. Publi
 | What you see | What it means and what to do |
 |---|---|
 | `Error 400: redirect_uri_mismatch` | The key is not a **Desktop app**. Do Part 6 again, choose **Desktop app**, and paste the new keys |
-| `Access blocked: ... has not completed the Google verification process` or `Error 403: access_denied` | Your Google address is not a test user and the app is still in Testing. Do Part 5 (add the address) or Part 7 (publish) |
+| `Access blocked: ... has not completed the Google verification process` or `Error 403: access_denied` | Your Google address is not a test user and the app is still in Testing. Do Part 5 (add the address) or Part 8 (publish) |
 | `Error 400: invalid_client` or *The OAuth client was not found* | The Client ID or secret was pasted wrongly. Copy them again from **Clients**, with no spaces before or after |
-| Signed out again after about a week | The app is still in **Testing**. Do Part 7 |
+| Signed out again after about a week | The app is still in **Testing**. Do Part 8 |
 | *Google Drive API has not been used in project ... or it is disabled* | Do Part 2 again, with the `NetMount` project selected in the top bar |
-| **Publish app** is greyed out | See the note at the end of Part 7 |
+| **Publish app** is greyed out and says *complete your configuration on the Branding page* | Do Part 7 (Branding), save it, then try Part 8 again |
 | I lost the secret | **Clients → NetMount → Add secret**, copy the new one, paste it in NetMount and press **Save** |
 | Still "rate limit" sometimes | Normal at very heavy use. Keep **Gentle on request limits** switched on in the storage |
 
